@@ -54,7 +54,7 @@ const DropdownLinks = [
 ];
 const Navbar = (handleOrderPopup) => {
   return (
-    <div className="mx-2 w-full bg-white dark:bg-gray-900 dark:text-white duration-200 sticky z-40 border-b-2 border-grey-200">
+    <div className="sm:px-32 w-full bg-white dark:bg-gray-900 duration-200 sticky z-40 border-b-2 border-grey-200">
       <div className="py-3">
         <div className="flex justify-between items-center">
           {/* Logo and Links section */}
@@ -72,7 +72,7 @@ const Navbar = (handleOrderPopup) => {
                   <li key={index}>
                     <NavLink
                       to={data.link}
-                      className="inline-block px-4 font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200"
+                      className="inline-block px-4 font-semibold text-gray-900 hover:text-black dark:hover:text-white duration-200"
                     >
                       {" "}
                       {data.name}
@@ -83,7 +83,7 @@ const Navbar = (handleOrderPopup) => {
                 <li className="relative cursor-pointer group">
                   <NavLink
                     to="#"
-                    className="flex items-center gap-[2px] font-semibold text-gray-500 dark:hover:text-white py-2"
+                    className="flex items-center gap-[2px] font-semibold text-gray-900 dark:hover:text-white py-2"
                   >
                     Categories
                     <span>
@@ -92,12 +92,12 @@ const Navbar = (handleOrderPopup) => {
                   </NavLink>
 
                   {/* Dropdown Links */}
-                  <div className="absolute z-[9999] hidden group-hover:block w-[200px] rounded-md bg-white shadow-md dark:bg-gray-900 p-2 dark:text-white ">
+                  <div className="absolute z-[9999] hidden group-hover:block w-[200px] rounded-md bg-white shadow-md p-2 ">
                     <ul className="space-y-2">
                       {DropdownLinks.map((data) => (
                         <li key={data.id}>
                           <NavLink
-                            className="text-gray-500  dark:hover:text-white duration-200 inline-block w-full p-2 hover:bg-primary/20 rounded-md font-semibold"
+                            className="text-gray-900  dark:hover:text-white duration-200 inline-block w-full p-2 hover:bg-primary/20 rounded-md font-semibold"
                             to={data.link}
                           >
                             {data.name}
