@@ -1,0 +1,45 @@
+name: Website Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Build website
+        run: npm run build
+
+      - name: Run tests
+        run: npm test
+
+      - name: Generate artifacts
+        run: |
+          mkdir artifacts
+          # Copy necessary files or directories to the artifacts directory
+          cp -r dist artifacts/
+          # You can add more files or directories as needed
+          
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: website-artifacts
+          path: ./artifacts
