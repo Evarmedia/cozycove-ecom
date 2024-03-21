@@ -1,9 +1,9 @@
 import React from 'react'
 import Hero from "../Hero/Hero"
 import { IoMdSearch } from "react-icons/io"
-import ProductCard from "../ProductDetails/ProductCard"
+// import ProductCard from "../ProductDetails/ProductCard"
 import AOS from "aos";
-import Products from '../ProductDetails/Products';
+// import Products from '../ProductDetails/Products';
 
 const Home = () => {
 
@@ -38,8 +38,8 @@ const Home = () => {
         </div>      
       </div>
         <Hero handleOrderPopup={handleOrderPopup}/>
-        <Products />
-        <ProductCard />
+        {/* <Products /> */}
+        {/* <ProductCard /> */}
         {/* <Categories /> */}
     </main>
   )
