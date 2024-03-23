@@ -1,19 +1,12 @@
 import React from 'react'
 import Hero from "../Hero/Hero"
 import { IoMdSearch } from "react-icons/io"
-// import ProductCard from "../ProductDetails/ProductCard"
+import Products from '../ProductDetails/Products';
 import AOS from "aos";
-// import Products from '../ProductDetails/Products';
 
 const Home = () => {
 
-  const handleOrderPopup = () => { 
-    
-    const [orderPopup, setOrderPopup] = React.useState(false);
-
-    setOrderPopup(!orderPopup);
-  };
-
+// Effect for AOS 
   React.useEffect(() => {
     AOS.init({
       duration: 800,
@@ -23,6 +16,8 @@ const Home = () => {
     });
     AOS.refresh();
   }, []);
+
+
   return (
     <main className="px-4">
       <div className="flex justify-start my-2 sm:hidden">
@@ -37,10 +32,8 @@ const Home = () => {
           <IoMdSearch className="text-xl text-gray-600 group-hover:text-primary absolute top-2 left-2" />
         </div>      
       </div>
-        <Hero handleOrderPopup={handleOrderPopup}/>
-        {/* <Products /> */}
-        {/* <ProductCard /> */}
-        {/* <Categories /> */}
+        <Hero />
+        <Products />
     </main>
   )
 }

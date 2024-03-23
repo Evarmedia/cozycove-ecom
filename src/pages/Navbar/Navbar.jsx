@@ -52,7 +52,7 @@ const DropdownLinks = [
     link: "children",
   },
 ];
-const Navbar = (handleOrderPopup) => {
+const Navbar = () => {
   return (
     <div className="sm:px-32 w-full bg-white dark:bg-gray-900 duration-200 sticky z-40 border-b-2 border-grey-200">
       <div className="py-3">
@@ -72,9 +72,8 @@ const Navbar = (handleOrderPopup) => {
                   <li key={index}>
                     <NavLink
                       to={data.link}
-                      className="inline-block px-4 font-semibold text-gray-900 hover:text-black dark:hover:text-white duration-200"
+                      className="inline-block px-4 font-semibold text-gray-900 hover:text-black focus:bg-blue-300 focus:rounded-full"
                     >
-                      {" "}
                       {data.name}
                     </NavLink>
                   </li>
@@ -137,7 +136,7 @@ const Navbar = (handleOrderPopup) => {
             <div className=" hidden lg:inline-block text-3xl text-gray-600">
             <MdPerson />
             </div>
-            <button className=" hidden lg:block relative p-3" onClick={handleOrderPopup}>
+            <button className=" hidden lg:block relative p-3">
             <AiOutlineShoppingCart className="text-2xl text-gray-600 dark:text-gray-400" />
               <div className="w-4 h-4 bg-red-500 text-white rounded-full absolute top-0 right-0 flex items-center justify-center text-xs">
                 0

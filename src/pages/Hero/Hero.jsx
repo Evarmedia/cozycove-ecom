@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import Image1 from "../../assets/tmpAssets/man2.png";
 import Image3 from "../../assets/tmpAssets/child2.png";
 import Image2 from "../../assets/tmpAssets/woman2.png";
-import Button from "../Shared/Button";
+import { NavLink } from "react-router-dom";
 
 const HeroData = [
   {
@@ -31,7 +31,7 @@ const HeroData = [
   },
 ];
 
-const Hero = ( handleOrderPopup ) => {
+const Hero = () => {
   const settings = {
     dots: true,
     arrows: true,
@@ -46,8 +46,7 @@ const Hero = ( handleOrderPopup ) => {
   };
   return (
     <div className="md:px-28 px-6">
-      <div
-        className="sm:my-6 overflow-hidden rounded-3xl min-h-[550px] sm:min-h-[650px] bg-gray-300 flex justify-center items-center">
+      <div className="sm:my-6 overflow-hidden rounded-3xl min-h-[550px] sm:min-h-[650px] bg-gray-300 flex justify-center items-center">
         <div className=" container md:w-full md:px-32 pb-6 sm:pb-0 border-gray-500 border-2 rounded-2xl shadow-2xl bg-gray-400">
           {/* Hero section */}
           <Slider {...settings}>
@@ -57,35 +56,26 @@ const Hero = ( handleOrderPopup ) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2">
                   {/* text content section */}
                   <div className="flex flex-col justify-center gap-4 sm:pl-3 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
-                    <h1
-                      className="text-2xl sm:text-6xl lg:text-3xl font-bold"
-                    >
+                    <h1 className="text-2xl sm:text-6xl lg:text-3xl font-bold">
                       {data.subtitle}
                     </h1>
-                    <h1
-                      className="text-5xl sm:text-6xl lg:text-7xl font-bold"
-                    >
+                    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold">
                       {data.title}
                     </h1>
-                    <h1
-                      className="text-5xl uppercase text-red-600 sm:text-[80px] md:text-[100px] xl:text-[150px] font-bold"
-                    >
+                    <h1 className="text-5xl uppercase text-red-600 sm:text-[80px] md:text-[100px] xl:text-[150px] font-bold">
                       {data.title2}
                     </h1>
                     <div>
-                      <Button
-                        text="See Category"
-                        bgColor="bg-brandYellow"
-                        textColor="text-black"
-                        handler={ handleOrderPopup }
-                      />
+                      <NavLink to="categories">
+                        <button className="btn-secondary text-xl px-4 shadow-md font-mono">
+                          Explore Category
+                        </button>
+                      </NavLink>
                     </div>
                   </div>
                   {/* Img section */}
                   <div className="order-1 sm:order-2">
-                    <div
-                      className="relative z-10"
-                    >
+                    <div className="relative z-10">
                       <img
                         src={data.img}
                         alt=""

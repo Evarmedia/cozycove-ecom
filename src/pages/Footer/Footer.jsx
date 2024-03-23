@@ -2,7 +2,7 @@
 
 const Footer = () => {
   return (
-    <div className="flex justify-center bg-red-400">Footer section</div>
+    <div className="flex justify-center bg-red-700">Footer section</div>
   )
 }
 
