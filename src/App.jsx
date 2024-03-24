@@ -7,17 +7,19 @@ import WomenCategory from "./pages/Categories/WomenCategory"
 import Home from "./pages/Home/Home"
 import Login from "./pages/Login/Login"
 import Signup from "./pages/Signup/Signup"
+import Cart from "./pages/Cart/Cart"
+import CartNoItems from "./pages/Cart/CartNoItems"
 import ErrorPage from "./pages/Error/ErrorPage"
 import Products from "./pages/ProductDetails/Products"
 import Trending from "./pages/Categories/Trending"
 import ChildrenCategory from "./pages/Categories/ChildrenCategory"
 import ProductDetail from "./pages/ProductDetails/ProductDetail"
+import MenCategory from "./pages/Categories/MenCategory"
 import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from "react-router-dom"
 
 // Layout for Pages
 import RootLayout from "./pages/Layouts/RootLayout"
 import CategoriesLayout from "./pages/Layouts/CategoriesLayout"
-import MenCategory from "./pages/Categories/MenCategory"
 
 
 const router = createBrowserRouter (
@@ -26,6 +28,8 @@ const router = createBrowserRouter (
       <Route index element={<Home />} />
       <Route exact path="login" element={<Login />} />
       <Route exact path="signup" element={<Signup />} />
+      <Route exact path="cart" element={<Cart />} />
+      <Route exact path="no-cart-items" element={<CartNoItems />} />
       <Route exact path="about" element={<About />} />
       <Route exact path="/products" element={<Products />} />
       <Route exact path="/products/:productId" element={<ProductDetail />} />
