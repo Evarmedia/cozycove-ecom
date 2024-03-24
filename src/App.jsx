@@ -5,8 +5,8 @@ import About from "./pages/About/About"
 import Categories from "./pages/Categories/Categories"
 import WomenCategory from "./pages/Categories/WomenCategory"
 import Home from "./pages/Home/Home"
-import Login from "./pages/Login/Login"
-import Signup from "./pages/Signup/Signup"
+import Login from "./pages/Auth/Login"
+import Signup from "./pages/Auth/Signup"
 import Cart from "./pages/Cart/Cart"
 import CartNoItems from "./pages/Cart/CartNoItems"
 import ErrorPage from "./pages/Error/ErrorPage"
@@ -24,9 +24,10 @@ import CategoriesLayout from "./pages/Layouts/CategoriesLayout"
 
 const router = createBrowserRouter (
   createRoutesFromElements(
+    <Route>
+    <Route exact path="login" element={<Login />} />
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
-      <Route exact path="login" element={<Login />} />
       <Route exact path="signup" element={<Signup />} />
       <Route exact path="cart" element={<Cart />} />
       <Route exact path="no-cart-items" element={<CartNoItems />} />
@@ -42,6 +43,7 @@ const router = createBrowserRouter (
       </Route>
 
         <Route path="*" element={<ErrorPage />} />
+      </Route>
       </Route>
       
   )
