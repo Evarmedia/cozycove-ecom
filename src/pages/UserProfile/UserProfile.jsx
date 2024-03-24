@@ -2,7 +2,7 @@
 
 const UserProfile = () => {
   return (
-    <div>UserProfile profile page</div>
+    <div>UserProfile profile page (Note: link icon from navbar)</div>
   )
 }
 
