@@ -47,7 +47,7 @@ const Hero = () => {
   return (
     <div className="md:px-28 px-6">
       <div className="sm:my-6 overflow-hidden rounded-3xl min-h-[550px] sm:min-h-[650px] bg-gray-300 flex justify-center items-center">
-        <div className=" container md:w-full md:px-32 pb-6 sm:pb-0 border-gray-500 border-2 rounded-2xl shadow-2xl bg-gray-400">
+        <div className=" container md:w-full md:px-32 pb-6 sm:pb-0 border-gray-500 border-2 rounded-2xl shadow-2xl">
           {/* Hero section */}
           <Slider {...settings}>
             {HeroData.map((data) => (
@@ -68,7 +68,7 @@ const Hero = () => {
                     <div>
                       <NavLink to="categories">
                         <button className="btn-secondary text-xl px-4 shadow-md font-mono">
-                          Explore our Category
+                          Explore Category
                         </button>
                       </NavLink>
                     </div>
