@@ -2,7 +2,7 @@
 
 const Signup = () => {
   return (
-    <div>Signup Page</div>
+    <div>Signup Page (note: link from login Page)</div>
   )
 }
 
