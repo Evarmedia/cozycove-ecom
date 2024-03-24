@@ -25,9 +25,9 @@ const HeroData = [
   {
     id: 1,
     img: Image3,
-    subtitle: "Children Wears",
-    title: "Fashion",
-    title2: "Cotton",
+    subtitle: "Warm and Cozy",
+    title: "Fashion for",
+    title2: "Children",
   },
 ];
 
@@ -68,7 +68,7 @@ const Hero = () => {
                     <div>
                       <NavLink to="categories">
                         <button className="btn-secondary text-xl px-4 shadow-md font-mono">
-                          Explore Category
+                          Explore our Category
                         </button>
                       </NavLink>
                     </div>
