@@ -1,8 +1,8 @@
 // import React from 'react'
-import { AiOutlineShoppingCart } from "react-icons/ai";
+
 const Cart = () => {
   return (
-<div><AiOutlineShoppingCart /></div>
+<div>Cart and checkout leading to payment page here</div>
   )
 }
 
