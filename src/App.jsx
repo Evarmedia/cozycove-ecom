@@ -25,9 +25,9 @@ import CategoriesLayout from "./pages/Layouts/CategoriesLayout"
 const router = createBrowserRouter (
   createRoutesFromElements(
     <Route>
-    <Route exact path="login" element={<Login />} />
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
+    <Route exact path="login" element={<Login />} />
       <Route exact path="signup" element={<Signup />} />
       <Route exact path="cart" element={<Cart />} />
       <Route exact path="no-cart-items" element={<CartNoItems />} />
