@@ -42,6 +42,9 @@ const Login = () => {
                 <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
                   Forgot password?
                 </a>
+                <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500 underline">
+                  Sign up here
+                </a>
               </div>
             </div>
             <div className="mt-2">
