@@ -10,7 +10,12 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
 
     steps:
       - name: Checkout repository
@@ -22,7 +27,7 @@ jobs:
           node-version: 20
       
       - name: Install dependencies
-        run: npm install vite@5.1.6
+        run: npm install
       
       - name: Build and lint
         run: |
