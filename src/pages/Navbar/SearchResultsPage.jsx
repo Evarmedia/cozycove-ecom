@@ -6,7 +6,7 @@ const SearchResultsPage = () => {
   
   return (
     <div>
-      Hello
+      Hello Friend this is Search result..
     </div>
     // <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
     //   {result.map((products) => (
