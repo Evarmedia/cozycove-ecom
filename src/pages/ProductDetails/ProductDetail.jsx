@@ -136,19 +136,3 @@ const ProductDetail = () => {
 
 export default ProductDetail;
 
-{
-  /* <div className="bg-red-500">
-             <img
-               src={product.image}
-               alt={product.title}
-               className="w-64 mx-auto"
-             />
-             <h1 className="text-3xl font-semibold mt-4">{product.title}</h1>
-             <p className="text-gray-600 mb-2">${product.price}</p>
-             <p className="mb-4">{product.description}</p>
-             <button className="bg-blue-500 text-white px-4 py-2 rounded-lg">
-              Add to Cart
-             </button>
-             //Wishlist button 
-           </div>*/
-}

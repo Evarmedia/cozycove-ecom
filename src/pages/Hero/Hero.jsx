@@ -36,7 +36,7 @@ const Hero = () => {
     dots: true,
     arrows: true,
     infinite: true,
-    speed: 800,
+    speed: 1000,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -46,8 +46,8 @@ const Hero = () => {
   };
   return (
     <div className="md:px-28 px-6">
-      <div className="sm:my-6 overflow-hidden rounded-3xl min-h-[550px] sm:min-h-[650px] bg-gray-300 flex justify-center items-center">
-        <div className=" container md:w-full md:px-32 pb-6 sm:pb-0 border-gray-500 border-2 rounded-2xl shadow-2xl">
+      <div className="sm:mt-6 overflow-hidden rounded-3xl min-h-[500px] flex justify-center items-center">
+        <div className=" container bg-gray-300 md:w-full md:px-32 pb-6 sm:pb-0 border-gray-500 border-2 rounded-2xl shadow-lg">
           {/* Hero section */}
           <Slider {...settings}>
             {HeroData.map((data) => (

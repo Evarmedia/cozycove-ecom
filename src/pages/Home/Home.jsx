@@ -1,8 +1,34 @@
-import React from 'react'
-import Hero from "../Hero/Hero"
-import { IoMdSearch } from "react-icons/io"
-import Products from '../ProductDetails/Products';
 import AOS from "aos";
+import React from 'react';
+import Banner from '../../Banner/Banner';
+import Hero from "../Hero/Hero";
+import Products from '../ProductDetails/Products';
+import img1 from '../../assets/tmpAssets/child2.png'
+import img2 from '../../assets/tmpAssets/man2.png'
+
+const BannerData = {
+  discount: "30% OFF",
+  title: "Fine Smile",
+  date: "10 Jan to 28 Jan",
+  image: img1,
+  title2: "Air Solo Bass",
+  title3: "Winter Sale",
+  title4:
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque reiciendis",
+  bgColor: "#f42c37",
+};
+
+const BannerData2 = {
+  discount: "30% OFF",
+  title: "Happy Hours",
+  date: "14 Jan to 28 Jan",
+  image: img2,
+  title2: "Smart Solo",
+  title3: "Winter Sale",
+  title4:
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque reiciendis",
+  bgColor: "#2dcc6f",
+};
 
 const Home = () => {
 
@@ -19,21 +45,11 @@ const Home = () => {
 
 
   return (
-    <main className="px-4">
-      <div className="flex justify-start my-2 sm:hidden">
-        <div className="w-full group relative ">
-          <input
-            type="text"
-              placeholder="Search products, brands and categories"
-              className="
-              px-8 h-8 w-full rounded-full border-gray-600 border-2 hover:border-red-300
-              "
-              />
-          <IoMdSearch className="text-xl text-gray-600 group-hover:text-primary absolute top-2 left-2" />
-        </div>      
-      </div>
+    <main className="px-4">        
         <Hero />
         <Products />
+        <Banner data={BannerData}/>
+        <Banner data={BannerData2}/>
     </main>
   )
 }
