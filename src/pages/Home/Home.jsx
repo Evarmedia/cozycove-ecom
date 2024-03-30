@@ -1,6 +1,6 @@
 import AOS from "aos";
 import React from 'react';
-import Banner from '../../Banner/Banner';
+import Banner from '../Banner/Banner';
 import Hero from "../Hero/Hero";
 import Products from '../ProductDetails/Products';
 import img1 from '../../assets/tmpAssets/child2.png'
