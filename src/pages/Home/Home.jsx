@@ -6,6 +6,7 @@ import Products from '../ProductDetails/Products';
 import img1 from '../../assets/tmpAssets/child2.png'
 import img2 from '../../assets/tmpAssets/man2.png'
 
+
 const BannerData = {
   discount: "30% OFF",
   title: "Fine Smile",
@@ -45,7 +46,7 @@ const Home = () => {
 
 
   return (
-    <main className="px-4">        
+    <main className="px-4 duration-200">        
         <Hero />
         <Products />
         <Banner data={BannerData}/>

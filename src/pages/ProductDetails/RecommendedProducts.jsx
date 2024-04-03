@@ -7,7 +7,7 @@ import ProductCard from "./ProductCard";
 const RecommendedProducts = () => {
   const [recommendedProducts, setRecommendedProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/products?_limit=4") // Fetch a limited number of products
+    fetch("https://fakestoreapi.com/products?_limit=4") // Fetch a limited number of products
       .then((response) => response.json())
       .then((data) => {
         setRecommendedProducts(data);

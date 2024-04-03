@@ -25,10 +25,32 @@ const FooterLinks = [
     link: "/products",
   },
 ];
+const FooterItems = [
+  {
+    title: "Order & Shipping",
+    link: "/",
+  },
+  {
+    title: "Replacement & Refund",
+    link: "/about",
+  },
+  {
+    title: "Contact us",
+    link: "/contact",
+  },
+  {
+    title: "Terms & Condition",
+    link: "/products",
+  },
+  {
+    title: "Privacy Policy",
+    link: "/",
+  },
+];
 
 const Footer = () => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center bg-amber-100">
       <div className="container">
         <div className="grid md:grid-cols-3 pb-20 pt-5">
           {/* company details */}
@@ -72,13 +94,32 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
+
+            <div className="py-8 px-4">
+              <h1 className="text-xl font-bold sm:text-left mb-3">
+              Terms:::Warranty
+              </h1>
+              <ul className="space-y-3">
+                {FooterItems.map((data, index) => (
+                  <li key={index}>
+                    <a
+                      href={data.link}
+                      className="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300"
+                    >
+                      {data.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             {/* Company Address */}
             <div className="py-8 px-4 col-span-2 sm:col-auto">
               <h1 className="text-xl font-bold sm:text-left mb-3">Address</h1>
               <div>
                 <div className="flex items-center gap-3">
                   <FaLocationArrow />
-                  <p>Noida , Uttar Pradesh</p>
+                  <p>Africa , Lorem ipsum dolor sit</p>
                 </div>
                 <div className="flex items-center gap-3 mt-6">
                   <FaMobileAlt />
