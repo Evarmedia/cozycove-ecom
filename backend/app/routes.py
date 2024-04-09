@@ -111,3 +111,33 @@ def create_category():
     return jsonify({'message': 'Category created  successfully'}), 201
 
 @app.put('/categories/<int:category_id>')
+def update_category(category_id):
+    """ Updates an existing category.
+
+    Args:
+        category_id: Id of the category.
+    """
+
+    data = request.json
+    name = data.get('name')
+    description = data.get('description')
+
+    query = "UPDATE categories SET name = %s, description = %s WHERE id = %s"
+    cursor.execute(query, (name, description, category_id))
+    db_connection.commit()
+
+    return jsonify({'message': 'Category updated successfully'})
+
+@app.delete('/categories/<int:category_id')
+def delete_category(category_id):
+    """ Delete an existing category.
+
+    Args:
+        category_id: The id of the category.
+    """
+
+    query = "DELETE FROM categories WHERE id = %s"
+    cursor.execute(query, (category_id))
+    db_connection.commit()
+
+    return jeonify({'message': 'Category deleted successfully'})
