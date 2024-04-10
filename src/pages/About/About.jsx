@@ -20,15 +20,19 @@ const About = () => {
             />
           </NavLink>
           <div className="p-6">
-            <h2 className="text-3xl font-semibold text-blue-500 mb-4">About Us</h2>
-            <div className="flex items-center">
-              <h1 className="text-2xl text-black font-medium mb-2">
-                <span className="text-2xl text-red-500 font-bold">COZYCOVE</span>{" "}
+            <h2 className="text-3xl font-semibold text-blue-500 mb-4">
+              About Us
+            </h2>
+            <div className="flex justify-center">
+              <h1 className="text-lg sm:text-2xl text-black font-medium mb-2">
+                <span className="text-lg sm:text-2xl text-red-700 font-bold">
+                  COZYCOVE
+                </span>{" "}
                 -Bringing Joy to Your Online Shopping Experience!
               </h1>
             </div>
             <h1 className="text-xl text-black font-semibold mb-2">Features:</h1>
-            <div className="flex flex-col sm:flex-row justify-between gap-10 p-4 my-1 sm:my-12">
+            <div className="flex flex-col sm:flex-row justify-between gap-10 p-2 my-1 sm:my-12">
               <h1 className="font-semibold text-xl">
                 {`Our store displays a variety of products=>`}
               </h1>
@@ -38,13 +42,13 @@ const About = () => {
                 className="w-[400px] rotate-6"
               />
             </div>
-            <div className="flex flex-col sm:flex-row justify-between gap-10 p-4 my-2 sm:my-12">
-              <h1 className="font-semibold text-xl">{`Seemless shopping Experience=>`}</h1>
+            <div className="flex flex-col-reverse sm:flex-row justify-between gap-10 p-2 my-2 sm:my-12">
               <img
                 src={homepage2}
                 alt="image of our shop page"
                 className="w-[400px] -rotate-6"
               />
+              <h1 className="font-semibold text-xl">{`<=Seemless shopping Experience`}</h1>
             </div>
             <p className="text-gray-700 mb-4">
               {`Welcome to our e-commerce store! We are dedicated to providing
