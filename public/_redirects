@@ -1,2 +1,2 @@
 # Redirects from what the browser requests to what we serve
-/              /about     200
+/about          /About     200
