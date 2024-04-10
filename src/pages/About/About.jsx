@@ -3,6 +3,7 @@
 import aboutBanner from "../../assets/tmpAssets/about.jpg";
 import Contributor from "./Contributor";
 import contributor1Img from "../../assets/tmpAssets/me.jpg";
+import homepage from "../../assets/tmpAssets/home.png"
 import { NavLink } from "react-router-dom";
 
 const About = () => {
@@ -18,9 +19,15 @@ const About = () => {
           />
           </NavLink>
           <div className="p-6">
-            <h2 className="text-3xl font-semibold text-red-700 mb-4">
+            
+            <h2 className="text-3xl font-semibold text-black mb-4">
               About Us
             </h2>
+            <h1 className="text-xl text-black font-semibold mb-2"><span className="text-3xl text-red-500">COZYCOVE:</span> Bringing Joy to Your Online Shopping Experience</h1>
+            <div className="flex justify-between">
+              <h1>Our stor displays a variety of products</h1>
+              <img src={homepage} alt="image of our shop page" />
+            </div>
             <p className="text-gray-700 mb-4">
               {`Welcome to our e-commerce store! We are dedicated to providing
               high-quality products and exceptional customer service.`}
@@ -82,7 +89,7 @@ const About = () => {
               <a href="/categories" className="btn-secondary">see  product categories</a>
               <button className="btn-primary">contact us</button>
             </div>
-            <div>
+            <div>            
               <h1 className="text-xl text-red-700 font-semibold mb-2">Inspired by a Vision</h1>
               <p className="text-gray-700 mb-4">
               Our project was inspired by the desire to solve a pressing problem in our community. Through research and personal experiences, we identified an opportunity to create a tool that would greatly improve the lives of our target users. This shared vision fueled our dedication and collaboration throughout the process.
