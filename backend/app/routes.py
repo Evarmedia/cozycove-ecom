@@ -44,6 +44,27 @@ def logout():
     session.pop('user_id', None)
     return redirect(url_for('index'))
 
+@app.route('/add_to_cart', methods=['POST'])
+def add_to_cart():
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+    if request.method == 'POST':
+        user_id = session['user_id']
+        product_id = request.form['product_id']
+        quantity = int(request.form['quantity'])
+        cursor.execute("INSERT INTO cart (user_id, prooduct_id, quantity) VALUES (%s, %s, %s)", (ser_id, product_id, quantity))
+        db_connection.commit()
+        return redirect(url_for('index'))
+
+@app.route('/cart')
+def cart():
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+    used_id = session['user_id']
+    cursor.execute("SELECT * FROM cart WHERE user_id = %s", (user_id))
+    cart_items = cursor.fetchall()
+    return render_template('cart.html', cart_items=cart_items)
+
 @app.get('/products')
 def get_products():
     """ Get all products."""
