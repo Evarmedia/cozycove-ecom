@@ -1,7 +1,48 @@
-from flask import jsonify, request
+from flask import jsonify, request, render_template, redirect, url_for, session
+from werkzeug.security import generate_password_hash, check_password_hash
 from  app import app, db_connection, cursor
 
 """ REST API set up, routes to impliment CRUD operations in the app."""
+
+app.route('/')
+def index():
+    cursor.execute("SELECT * FROM products")
+    products = cursor.fetchall()
+returnrender_template('index.html', products=products)
+
+app,route('/register', methods=['GET', 'POST'])
+def register():
+    """ Registers a new user into the app."""
+
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        harshed_password = generate_password_hash(password)
+        cursor.execute("INSERT INTO users (username, password) VALUES (%s, %s)", (sername, hashed_password))
+        db_connection.commit()
+        return redirect(url_for('login'))
+    return render_template('register.html')
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    """ Logsin a registered user."""
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        cursor.execute("SELECT * FROM users WHERE username = %s", (sername,))
+        user = cursor.fetchone()
+        if user and check_password_hash(user[2], password):
+            session['user_id'] = user[0]
+            return redirect(url_for('index'))
+        else:
+            return render_template('login.httml', error='Invalid username or password ')
+    return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+    """ Logout a useeeer from  thhe  app."""
+    session.pop('user_id', None)
+    return redirect(url_for('index'))
 
 @app.get('/products')
 def get_products():
