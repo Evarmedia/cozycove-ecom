@@ -80,7 +80,7 @@ const About = () => {
               </h1>
               <div className="flex sm:gap-5 flex-wrap justify-center">
                 <Contributor
-                  imgSrc={contributor1Img}
+                  imgSrc="https://placehold.co/600x400"
                   name="Celestine Wangechi"
                   description="Backend Developer"
                   linkedin="https://www.linkedin.com/in/johndoe"
@@ -98,12 +98,12 @@ const About = () => {
                 />
 
                 <Contributor
-                  imgSrc={contributor1Img}
+                  imgSrc="https://placehold.co/600x400"
                   name="Taiwo Taiwo"
                   description="Devops"
-                  linkedin="https://www.linkedin.com/in/johndoe"
-                  github="https://github.com/johndoe"
-                  twitter="https://twitter.com/johndoe"
+                  linkedin="https://www.linkedin.com/in/taiwo-taiwo-0b5953241"
+                  github="https://github.com/Dot-Tee"
+                  twitter="https://x.com/TaiwoOladotun6"
                 />
               </div>
             </div>
