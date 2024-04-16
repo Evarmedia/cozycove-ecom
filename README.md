@@ -1,8 +1,22 @@
-# React + Vite
+# CozyCove Ecormmerce Platform
+buit with 
+# React + Vite + ❤️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+We are a dynamic team of passionate software engineers who have come together to build an innovative solution. Each member brings a unique set of skills and expertise to the table, ensuring a well-rounded approach to project development.
+### Team Members
+Celestine wangechi - Backend
+Mishak Mosimabale - Frontend
+Taiwo Taiwo - DevOps
 
-Currently, two official plugins are available:
+You can find the project's GitHub repository here[https://github.com/Evarmedia/cozycove], the deployed project page here[https://cozycove-ecom.netlify.app/], and the project's landing page here[https://cozycove-ecom.netlify.app/about]. Connect with me on LinkedIn. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Link to backend api documentation: 
+
+## Installation && Usage
+git clone https://github.com/Evarmedia/cozycove-ecom.git
+
+cd cozycove-ecom
+
+npm install
+
+npm run dev

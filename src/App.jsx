@@ -8,7 +8,7 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Auth/Login";
 import Signup from "./pages/Auth/Signup";
 import Cart from "./pages/Cart/Cart";
-import CartNoItems from "./pages/Cart/CartNoItems";
+import EmptyCart from "./pages/Cart/EmptyCart";
 import ErrorPage from "./pages/Error/ErrorPage";
 import Products from "./pages/ProductDetails/Products";
 import Trending from "./pages/Categories/Trending";
@@ -41,7 +41,7 @@ const router = createBrowserRouter(
         {/* <Route exact path="/search" element={<SearchResultsPage />} /> */}
         <Route exact path="newpassword" element={<NewPassword />} />
         <Route exact path="cart" element={<Cart />} />
-        <Route exact path="no-cart-items" element={<CartNoItems />} />
+        <Route exact path="empty-cart" element={<EmptyCart />} />
         <Route exact path="about" element={<About />} />
         <Route exact path="/products" element={<Products />} />
         <Route exact path="/products/:productId" element={<ProductDetail />} />
