@@ -1,6 +1,6 @@
 // ProductDetail.jsx
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import RecommendedProducts from "./RecommendedProducts";
 
@@ -9,10 +9,11 @@ const ProductDetail = () => {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/products/${productId}`)
+    fetch(`https://fakestoreapi.com/products/${productId}`)
       .then((response) => response.json())
       .then((data) => {
         setProduct(data);
+        console.log(data);
       })
       .catch((error) => {
         console.error("Error fetching product details:", error);

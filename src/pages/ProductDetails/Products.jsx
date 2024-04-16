@@ -12,6 +12,9 @@ const Products = () => {
       })
       .catch((error) => {
         console.error("Error fetching product data:", error);
+        <>
+        Error fetching product data
+        </>
       });
   }, []);
 

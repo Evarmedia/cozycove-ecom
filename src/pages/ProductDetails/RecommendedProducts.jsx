@@ -1,7 +1,6 @@
 // RecommendedProducts.jsx
 
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
 import ProductCard from "./ProductCard";
 
 const RecommendedProducts = () => {
@@ -21,9 +20,8 @@ const RecommendedProducts = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {recommendedProducts.map((product) => (
         <div key={product.id} className="flex justify-center p-4">
-          <NavLink to={`/products/${product.id}`}>
             <ProductCard product={product} />
-          </NavLink>
+          
         </div>
       ))}
     </div>
