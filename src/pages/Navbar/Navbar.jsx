@@ -88,6 +88,7 @@ const Navbar = () => {
                         <FaCaretDown className="group-hover:rotate-180 duration-300" />
                       </span>
                     </NavLink>
+                    {/**Dropdown menu */}
                     <div className="absolute z-[9999] hidden group-hover:block w-[200px] rounded-md bg-white shadow-md p-2 ">
                       <ul className="space-y-2">
                         {DropdownLinks.map((data) => (
@@ -120,10 +121,12 @@ const Navbar = () => {
                 <MdPerson />
               </div>
               <button className=" hidden lg:block relative p-3">
+                <NavLink to="/cart">
                 <AiOutlineShoppingCart className="text-2xl text-gray-600 dark:text-gray-400" />
                 <div className="w-4 h-4 bg-red-500 text-white rounded-full absolute top-0 right-0 flex items-center justify-center text-xs">
                   0
                 </div>
+                </NavLink>
               </button>
               <div className="p-2 absolute left-0 top-2">
                 <Mobilemenu />

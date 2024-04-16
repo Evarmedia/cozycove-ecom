@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 const Categories = () => {
   return (
-    <div className="my-12 sm:py-8 sm:px-36">
+    <div className="my-12 px-8 sm:py-8 sm:px-36">
       <div className="">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* first col */}
